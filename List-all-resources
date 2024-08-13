@@ -1,0 +1,13 @@
+# List all resources in a subscription
+
+# Given subscription ID
+$CurrentSubscriptionID = "ceff06cb-e29d-4486-a3ae-eaaec5689f94"
+
+# Set output format
+$OutputFormat = "table"
+
+# Set the given subscription as the active one
+& az account set --subscription $CurrentSubscriptionID
+
+# List resources in the current subscription
+& az resource list -o $OutputFormat
